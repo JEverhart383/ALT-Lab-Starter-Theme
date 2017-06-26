@@ -13,3 +13,33 @@ Text Domain: altlabstartertheme
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
+
+
+
+/* Override to push WP-admin bar below other stuff */
+
+body.admin-bar .navbar , 
+body.admin-bar {
+	margin-top: 32px;
+}
+
+
+@media screen and (max-width: 782px){
+	body.admin-bar .navbar , 
+	body.admin-bar {
+		margin-top: 46px;
+	}
+}
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+
+/* Bootstrap Overrides */
+/*
+.navbar {
+	min-height: 50px;
+}*/
