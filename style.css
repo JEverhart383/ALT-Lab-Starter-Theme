@@ -37,6 +37,24 @@ body {
   padding-bottom: 20px;
 }
 
+#menu-primary-menu > li {
+	position: relative; 
+}
+
+#menu-primary-menu .sub-menu{
+	position: absolute;
+	display: none; 
+	min-width: 150px;
+	max-width: 200px;
+	background-color: #222; 
+	padding: 15px;
+}
+
+#menu-primary-menu li:hover > .sub-menu{
+	position: absolute;
+	display: block; 
+}
+
 
 /* Bootstrap Overrides */
 /*
