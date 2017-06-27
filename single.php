@@ -1,18 +1,12 @@
 	<?php get_header(); ?>
-	<h1>home.php</h1>
+	<h1>Single.php</h1>
 	<?php
 		// Start the loop.
 		while ( have_posts() ) : the_post();
-				if (has_post_format('standard') ){
-					$format = get_post_format(); 
-					echo $format; 
-				} else {
-					echo 'false'; 
-				}
+				get_post_format(); 
 			// Include the page content template.
 			
 				the_title(); 
-				the_content();
 		
 			// get_template_part( 'template-parts/content', 'page' );
 

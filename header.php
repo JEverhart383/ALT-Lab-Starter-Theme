@@ -12,7 +12,7 @@
 <?php wp_head(); ?>
 
 </head>
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> >
 
  <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
@@ -50,11 +50,12 @@
  </nav>
  <div class="jumbotron">
 	<div class="container">
-		
+		<h1><?php the_title(); ?></h1>
 	</div>
 </div>
 
  <!-- Begin Main Content Container  -->
 <div class="container">
+	<div class="row">
  	
 

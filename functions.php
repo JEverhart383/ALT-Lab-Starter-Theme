@@ -29,9 +29,50 @@
 			'primary' => __( 'Primary Menu')
 		) );
 
+		add_theme_support( 'post-formats', array(
+				'aside',
+				'image',
+				'video',
+				'quote',
+				'link',
+				'gallery',
+				'status',
+				'audio',
+				'chat',
+		) );
+
 	}
 
 	add_action('after_setup_theme', 'alt_lab_setup'); 
+
+
+	function alt_lab_sidebars_setup(){
+		
+		register_sidebar(array(
+			'name' => __('Primary Sidebar'), 
+			'id' => 'primary', 
+			'description' => __('This sidebar is displayed on the Sidebar template.'), 
+			'before_widget' => '<div id="%1$s"class="col-lg-4 col-md-4 widget %2$s">', 
+			'after_widget' => '</div>', 
+			'before_title' => '<h3>', 
+			'after_title' => '</h3>'
+			)
+		); 
+
+		register_sidebar(array(
+			'name' => __('Footer Widget Area'), 
+			'id' => 'footer', 
+			'description' => __('This sidebar is displayed in the footer.'), 
+			'before_widget' => '<div id="%1$s"class="col-lg-4 col-md-4 widget %2$s">', 
+			'after_widget' => '</div>', 
+			'before_title' => '<h3>', 
+			'after_title' => '</h3>'
+			)
+		); 
+
+	}
+
+	add_action('widgets_init', 'alt_lab_sidebars_setup'); 
 
 
 ?>
