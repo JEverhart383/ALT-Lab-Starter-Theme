@@ -7,6 +7,7 @@
 			// Include the page content template.
 			
 				the_title(); 
+				the_content(); 
 		
 			// get_template_part( 'template-parts/content', 'page' );
 
